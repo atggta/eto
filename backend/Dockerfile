@@ -15,6 +15,7 @@ RUN pip install --user --no-cache-dir -r requirements.txt
 ENV PATH="/home/worker/.local/bin:${PATH}"
 
 COPY --chown=worker:worker app/ app/
+COPY database.db .
 
 LABEL maintainer="Yuriy Semyenkov <yuriy.semyenkov@gmail.com>" \
       version="1.0.0"
