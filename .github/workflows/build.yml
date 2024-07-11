@@ -24,7 +24,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: etoosamoe/eto-backend
+          images: atgsbox/eto-backend
 
       - name: Create .env file
         run: mv backend/.env.example backend/.env
@@ -34,7 +34,7 @@ jobs:
         with:
           context: backend
           push: true
-          tags: etoosamoe/eto-backend:latest
+          tags: atgsbox/eto-backend:latest
           labels: ${{ steps.meta.outputs.labels }}
 
   build-frontend:
@@ -54,7 +54,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: etoosamoe/eto-frontend
+          images: atgsbox/eto-frontend
 
       - name: Create .env file
         run: mv frontend/.env.example frontend/.env
@@ -64,5 +64,5 @@ jobs:
         with:
           context: frontend
           push: true
-          tags: etoosamoe/eto-frontend:latest
+          tags: atgsbox/eto-frontend:latest
           labels: ${{ steps.meta.outputs.labels }}
