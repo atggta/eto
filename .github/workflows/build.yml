@@ -24,7 +24,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: atgsbox/eto-backend
+          images: etoosamoe/eto-backend
 
       - name: Create .env file
         run: mv backend/.env.example backend/.env
